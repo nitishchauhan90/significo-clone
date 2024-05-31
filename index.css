@@ -1,0 +1,46 @@
+:root{
+    --salmon:#EF9d71;
+    --black:#000;
+    --white:#fff; 
+    --cyan:#AEDEE0;
+    --dcyan:•#1f2f32;
+    --dsalmon:#532521;
+    --select:#f19442;
+}
+*::selection{
+    background-color:var(--salmon);
+}
+body{
+    transition: background-color ease-out .5s;
+}
+.video{
+    clip-path: circle(var(--clip) at 50% 50%);
+}
+
+body[theme="black"]{
+    background-color:var(--black);
+}
+body[theme="black"] .section{
+    color: var(--white); 
+}
+body[theme="cyan"]{
+    background-color: var(--cyan);
+}
+body[theme="cyan"] .section{
+    color: var(--dcyan);
+}
+body[theme="salmon"]{
+    background-color: var(--salmon);
+}
+body[theme="salmon"] .section{
+    color: var(--dsalmon);
+}
+body[theme="salmon"] .section::selection{
+    background-color: var(--white);
+}
+body[theme="light"]{
+    background-color: var(--white);
+}
+body[theme="light"] .section{
+    color:var(--black);
+}
